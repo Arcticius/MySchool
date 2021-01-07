@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.AddActivity">
+
+    <TextView
+        android:text="Add New Student"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:textStyle="bold"
+        android:textColor="@color/purple"
+        android:textSize="25dp"/>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/custom_spinner">
+
+        <TableRow>
+            <RelativeLayout
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_gravity="end|center"
+                android:orientation="horizontal"
+                android:layout_column="1">
+
+                <TextView
+                    android:id="@+id/add_t1"
+                    android:text="UID"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:textStyle="bold"
+                    android:textColor="#343434"
+                    android:textSize="17dp"/>
+
+                <com.example.myschool.util.EditTextWithClear
+                    android:id="@+id/text_add_uid"
+                    android:layout_below="@+id/add_t1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:ems="8"
+                    android:hint="Enter UID"
+                    android:inputType="text"/>
+
+                <TextView
+                    android:id="@+id/add_t2"
+                    android:text="Username"
+                    android:layout_below="@id/text_add_uid"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:textStyle="bold"
+                    android:textColor="#343434"
+                    android:textSize="17dp"/>
+
+                <com.example.myschool.util.EditTextWithClear
+                    android:id="@+id/text_add_name"
+                    android:layout_below="@+id/add_t2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:ems="8"
+                    android:hint="Enter Username"
+                    android:inputType="text"/>
+
+                <TextView
+                    android:id="@+id/add_t3"
+                    android:text="Password"
+                    android:layout_below="@id/text_add_name"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:textStyle="bold"
+                    android:textColor="#343434"
+                    android:textSize="17dp"/>
+
+                <com.example.myschool.util.EditTextWithClear
+                    android:id="@+id/text_add_pwd"
+                    android:layout_below="@+id/add_t3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:ems="8"
+                    android:hint="Enter Password"
+                    android:inputType="text"/>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_gravity="end|center"
+                android:orientation="horizontal"
+                android:layout_column="2">
+
+                <TextView
+                    android:id="@+id/add_t4"
+                    android:text="Batch"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:textStyle="bold"
+                    android:textColor="#343434"
+                    android:textSize="17dp"/>
+
+                <com.example.myschool.util.EditTextWithClear
+                    android:id="@+id/text_add_batch"
+                    android:layout_below="@+id/add_t4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:ems="8"
+                    android:hint="Enter Batch"
+                    android:inputType="text"/>
+
+                <TextView
+                    android:id="@+id/add_t5"
+                    android:text="Date of Birth"
+                    android:layout_below="@id/text_add_batch"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:textStyle="bold"
+                    android:textColor="#343434"
+                    android:textSize="17dp"/>
+
+                <com.example.myschool.util.EditTextWithClear
+                    android:id="@+id/text_add_dob"
+                    android:layout_below="@+id/add_t5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:ems="8"
+                    android:hint="Enter Date of Birth"
+                    android:inputType="text"/>
+
+                <TextView
+                    android:id="@+id/add_t6"
+                    android:text="Leave Balance"
+                    android:layout_below="@id/text_add_dob"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:textStyle="bold"
+                    android:textColor="#343434"
+                    android:textSize="17dp"/>
+
+                <com.example.myschool.util.EditTextWithClear
+                    android:id="@+id/text_add_balance"
+                    android:layout_below="@+id/add_t6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:ems="8"
+                    android:hint="Enter Balance"
+                    android:inputType="text"/>
+
+            </RelativeLayout>
+        </TableRow>
+    </TableLayout>
+
+    <RelativeLayout
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:background="@drawable/custom_spinner">
+
+        <TextView
+            android:id="@+id/add_t7"
+            android:text="Blood Group"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:textColor="#343434"
+            android:textSize="17dp"/>
+
+        <com.example.myschool.util.EditTextWithClear
+            android:id="@+id/text_add_blood"
+            android:layout_toRightOf="@id/add_t7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Enter Blood Group"
+            android:inputType="text"/>
+
+        <TextView
+            android:id="@+id/add_t8"
+            android:text="E-Mail"
+            android:layout_width="120dp"
+            android:layout_below="@id/add_t7"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:textColor="#343434"
+            android:textSize="17dp"/>
+
+        <com.example.myschool.util.EditTextWithClear
+            android:id="@+id/text_add_email"
+            android:layout_below="@id/text_add_blood"
+            android:layout_toRightOf="@id/add_t8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Enter E-Mail"
+            android:inputType="text"/>
+
+        <TextView
+            android:id="@+id/add_t9"
+            android:text="Phone No."
+            android:layout_width="120dp"
+            android:layout_below="@id/add_t8"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:textColor="#343434"
+            android:textSize="17dp"/>
+
+        <com.example.myschool.util.EditTextWithClear
+            android:id="@+id/text_add_phone"
+            android:layout_below="@id/text_add_email"
+            android:layout_toRightOf="@id/add_t8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Enter Phone Number"
+            android:inputType="text"/>
+
+        <TextView
+            android:id="@+id/add_t10"
+            android:text="Address"
+            android:layout_width="120dp"
+            android:layout_below="@id/add_t9"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:textColor="#343434"
+            android:textSize="17dp"/>
+
+        <com.example.myschool.util.EditTextWithClear
+            android:id="@+id/text_add_address"
+            android:layout_below="@id/text_add_phone"
+            android:layout_toRightOf="@id/add_t10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Enter Address"
+            android:inputType="text"/>
+
+        <Button
+            android:id="@+id/button_add_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/add_t10"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:text="Cancel"
+            android:background="@drawable/btn_rectangle"
+            android:textColor="@color/white"/>
+
+        <Button
+            android:id="@+id/button_add_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/add_t10"
+            android:layout_toRightOf="@+id/button_add_cancel"
+            android:text="Save"
+            android:layout_marginLeft="180dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/btn_rectangle"
+            android:textColor="@color/white"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

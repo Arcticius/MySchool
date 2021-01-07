@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.DetailUpdaterActivity">
+
+    <TextView
+        android:text="Update Your Details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:textStyle="bold"
+        android:textColor="@color/purple"
+        android:textSize="25dp"/>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/custom_spinner">
+
+        <TableRow>
+            <LinearLayout
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_column="1">
+
+                <ImageView
+                    android:id="@+id/image_view"
+                    android:src="@mipmap/ic_launcher"
+                    android:layout_width="130dp"
+                    android:layout_height="120dp"
+                    android:layout_marginLeft="15dp"/>
+
+                <Button
+                    android:id="@+id/button_update_photo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_margin="5dp"
+                    android:text="Update"
+                    android:paddingTop="1dp"
+                    android:paddingBottom="1dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/btn_rectangle"
+                    android:textColor="@color/white"/>
+
+                <Button
+                    android:id="@+id/button_delete_photo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_margin="5dp"
+                    android:text="Remove"
+                    android:paddingTop="1dp"
+                    android:paddingBottom="1dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/btn_rectangle"
+                    android:textColor="@color/white"/>
+
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/custom_spinner"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_gravity="end|center"
+                android:orientation="horizontal"
+                android:layout_column="2">
+
+                <TextView
+                    android:id="@+id/t1"
+                    android:text="Name"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:textStyle="bold"
+                    android:textColor="#343434"
+                    android:textSize="17dp"/>
+
+                <com.example.myschool.util.EditTextWithClear
+                    android:id="@+id/text_update_name"
+                    android:layout_below="@+id/t1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:ems="8"
+                    android:hint="Enter Your User ID"
+                    android:inputType="text"/>
+
+                <TextView
+                    android:id="@+id/t2"
+                    android:text="Gender"
+                    android:layout_below="@id/text_update_name"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:textStyle="bold"
+                    android:textColor="#343434"
+                    android:textSize="17dp"/>
+
+                <RadioGroup
+                    android:id="@+id/radio_update_gender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_below="@id/t2"
+                    android:layout_marginLeft="10dp">
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Male"/>
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Female"/>
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/t3"
+                    android:text="Date of Birth"
+                    android:layout_below="@id/radio_update_gender"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:textStyle="bold"
+                    android:textColor="#343434"
+                    android:textSize="17dp"/>
+
+                <com.example.myschool.util.EditTextWithClear
+                    android:id="@+id/text_update_dob"
+                    android:layout_below="@+id/t3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:ems="8"
+                    android:hint="Enter Your Date of Birth"
+                    android:inputType="text"/>
+
+            </RelativeLayout>
+        </TableRow>
+    </TableLayout>
+
+    <RelativeLayout
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:background="@drawable/custom_spinner">
+
+        <TextView
+            android:id="@+id/t4"
+            android:text="Blood Group"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:textColor="#343434"
+            android:textSize="17dp"/>
+
+        <com.example.myschool.util.EditTextWithClear
+            android:id="@+id/text_update_blood"
+            android:layout_toRightOf="@id/t4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Enter Your Blood Group"
+            android:inputType="text"/>
+
+        <TextView
+            android:id="@+id/t5"
+            android:text="E-Mail"
+            android:layout_width="120dp"
+            android:layout_below="@id/t4"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:textColor="#343434"
+            android:textSize="17dp"/>
+
+        <com.example.myschool.util.EditTextWithClear
+            android:id="@+id/text_update_email"
+            android:layout_below="@id/text_update_blood"
+            android:layout_toRightOf="@id/t5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Enter Your E-Mail"
+            android:inputType="text"/>
+
+        <TextView
+            android:id="@+id/t6"
+            android:text="Phone No."
+            android:layout_width="120dp"
+            android:layout_below="@id/t5"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:textColor="#343434"
+            android:textSize="17dp"/>
+
+        <com.example.myschool.util.EditTextWithClear
+            android:id="@+id/text_update_phone"
+            android:layout_below="@id/text_update_email"
+            android:layout_toRightOf="@id/t6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Enter Your Phone Number"
+            android:inputType="text"/>
+
+        <TextView
+            android:id="@+id/t7"
+            android:text="Address"
+            android:layout_width="120dp"
+            android:layout_below="@id/t6"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:textColor="#343434"
+            android:textSize="17dp"/>
+
+        <com.example.myschool.util.EditTextWithClear
+            android:id="@+id/text_update_address"
+            android:layout_below="@id/text_update_phone"
+            android:layout_toRightOf="@id/t6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Enter Your Address"
+            android:inputType="text"/>
+
+        <Button
+            android:id="@+id/button_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/t7"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:text="Cancel"
+            android:background="@drawable/btn_rectangle"
+            android:textColor="@color/white"/>
+
+        <Button
+            android:id="@+id/button_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/t7"
+            android:layout_toRightOf="@+id/button_cancel"
+            android:text="Save"
+            android:layout_marginLeft="180dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/btn_rectangle"
+            android:textColor="@color/white"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

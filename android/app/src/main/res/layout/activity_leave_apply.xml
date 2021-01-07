@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.LeaveApplyActivity">
+
+    <LinearLayout
+        android:id="@+id/my_history"
+        android:layout_width="400dp"
+        android:layout_height="225dp"
+        android:orientation="horizontal"
+        android:background="@drawable/custom_spinner"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp">
+
+        <RelativeLayout
+            android:layout_width="370dp"
+            android:layout_marginLeft="20dp"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/user_image"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/text_history_t1"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="30dp"
+                android:text="Name"
+                android:textStyle="bold"
+                android:textSize="17dp"
+                android:textColor="#343434"/>
+            <TextView
+                android:id="@+id/text_history_name"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/text_history_t1"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="30dp"
+                android:text="default text"
+                android:textSize="17dp"
+                android:textColor="#343434"/>
+
+            <TextView
+                android:id="@+id/text_history_t2"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:text="Leave Date"
+                android:layout_below="@id/text_history_t1"
+                android:textStyle="bold"
+                android:textSize="17dp"
+                android:textColor="#343434"/>
+            <TextView
+                android:id="@+id/text_history_date"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/text_history_t2"
+                android:layout_below="@id/text_history_name"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="default text"
+                android:textSize="17dp"
+                android:textColor="#343434"/>
+            <TextView
+                android:id="@+id/text_history_t3"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:text="Reason"
+                android:layout_below="@id/text_history_t2"
+                android:textStyle="bold"
+                android:textSize="17dp"
+                android:textColor="#343434"/>
+            <TextView
+                android:id="@+id/text_history_reason"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/text_history_t3"
+                android:layout_below="@id/text_history_date"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="default text"
+                android:textSize="17dp"
+                android:textColor="#343434"/>
+            <TextView
+                android:id="@+id/text_history_t4"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:text="Status"
+                android:layout_below="@id/text_history_t3"
+                android:textStyle="bold"
+                android:textSize="17dp"
+                android:textColor="#343434"/>
+            <TextView
+                android:id="@+id/text_history_status"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/text_history_t4"
+                android:layout_below="@id/text_history_reason"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="default text"
+                android:textSize="17dp"
+                android:textColor="#343434"/>
+
+            <Button
+                android:id="@+id/button_apply_start_new"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text_history_t4"
+                android:layout_marginLeft="100dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="20dp"
+                android:text="  Start New Apply  "
+                android:background="@drawable/btn_rectangle"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:id="@+id/text_apply_noticing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text_history_t4"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="20dp"
+                android:text="Please wait for the admin to review your apply."
+                android:textSize="17dp"
+                android:textColor="#343434"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/apply_leave"
+        android:layout_width="400dp"
+        android:layout_height="230dp"
+        android:orientation="horizontal"
+        android:background="@drawable/custom_spinner"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp">
+
+        <RelativeLayout
+            android:layout_width="370dp"
+            android:layout_marginLeft="20dp"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/text_apply_t1"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="30dp"
+                android:text="Name"
+                android:textStyle="bold"
+                android:textSize="17dp"
+                android:textColor="#343434"/>
+            <com.example.myschool.util.EditTextWithClear
+                android:id="@+id/text_apply_name"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/text_apply_t1"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:hint="Enter Your Name"
+                android:textSize="17dp"
+                android:textColor="#343434"/>
+
+            <TextView
+                android:id="@+id/text_apply_t2"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:text="Leave Date"
+                android:layout_below="@id/text_apply_t1"
+                android:textStyle="bold"
+                android:textSize="17dp"
+                android:textColor="#343434"/>
+            <com.example.myschool.util.EditTextWithClear
+                android:id="@+id/text_apply_date"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/text_apply_t2"
+                android:layout_below="@id/text_apply_name"
+                android:layout_marginLeft="10dp"
+                android:hint="Enter Leave Date"
+                android:textSize="17dp"
+                android:textColor="#343434"/>
+            <TextView
+                android:id="@+id/text_apply_t3"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:text="Reason"
+                android:layout_below="@id/text_apply_t2"
+                android:textStyle="bold"
+                android:textSize="17dp"
+                android:textColor="#343434"/>
+            <com.example.myschool.util.EditTextWithClear
+                android:id="@+id/text_apply_reason"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/text_apply_t3"
+                android:layout_below="@id/text_apply_date"
+                android:layout_marginLeft="10dp"
+                android:hint="Enter Reason"
+                android:textSize="17dp"
+                android:textColor="#343434"/>
+
+            <Button
+                android:id="@+id/button_apply_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text_apply_t3"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:text="Cancel"
+                android:background="@drawable/btn_rectangle"
+                android:textColor="@color/white"/>
+
+            <Button
+                android:id="@+id/button_apply_save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text_apply_reason"
+                android:layout_toRightOf="@+id/button_apply_cancel"
+                android:text="Save"
+                android:layout_marginLeft="130dp"
+                android:layout_marginTop="17dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/btn_rectangle"
+                android:textColor="@color/white"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+
+</LinearLayout>
